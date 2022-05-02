@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>添加景点</title>
+    <title>Add Restaurant</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -15,15 +15,15 @@
     <div class="layui-row layui-col-space15">
         <div class="layui-col-md12">
             <div class="layui-card">
-                <div class="layui-card-header">Add Attractions</div>
+                <div class="layui-card-header">Add Restaurant</div>
                 <div class="layui-card-body" pad15>
 
                     <div class="layui-form" lay-filter="">
 
                         <div class="layui-form-item">
-                            <label class="layui-form-label">Attraction images</label>
+                            <label class="layui-form-label">Restaurant Image</label>
                             <div class="layui-upload">
-                                <button type="button" class="layui-btn" id="test1" name="img">upload Image</button>
+                                <button type="button" class="layui-btn" id="test1" name="img">upload Images</button>
                                 <div class="layui-upload-list">
                                     <img class="layui-upload-img" id="demo1">
                                     <p id="demoText" class="layui-upload-text"></p>
@@ -32,45 +32,49 @@
                         </div>
 
                         <div class="layui-form-item">
-                            <label class="layui-form-label">Attraction name</label>
+                            <label class="layui-form-label">Restaurant Name</label>
                             <div class="layui-input-inline">
-                                <input type="text" name="name" required  lay-verify="required" autocomplete="off" placeholder="input name" class="layui-input">
+                                <input type="text" name="name" required  lay-verify="required" autocomplete="off" placeholder="请输入名称" class="layui-input">
                             </div>
                         </div>
 
                         <div class="layui-form-item">
-                            <label class="layui-form-label">price</label>
+                            <label class="layui-form-label">Address</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="address" lay-verify="required" placeholder="address" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">work time</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="time" id="date" lay-verify="time" placeholder="HH:mm:ss" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">Price</label>
                             <div class="layui-input-inline">
                                 <input type="text" name="price" lay-verify="number" placeholder="input price" autocomplete="off" class="layui-input">
                             </div>
                         </div>
 
                         <div class="layui-form-item">
-                            <label class="layui-form-label">stock</label>
-                            <div class="layui-input-inline">
-                                <input type="text" name="stock" lay-verify="number"placeholder="input stock" autocomplete="off" class="layui-input">
-                            </div>
-                        </div>
-
-                        <div class="layui-form-item">
-                            <label class="layui-form-label">departure date</label>
-                            <div class="layui-input-inline">
-                                <input type="text" name="startdate" id="date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
-                            </div>
-                        </div>
-
-
-                        <div class="layui-form-item">
-                            <label class="layui-form-label">Attraction Description</label>
+                            <label class="layui-form-label">Restaurant description</label>
                             <div class="layui-input-inline">
                                 <input type="text" name="description" autocomplete="off" class="layui-input">
                             </div>
                         </div>
 
                         <div class="layui-form-item layui-form-text">
-                            <label class="layui-form-label">Details</label>
+                            <label class="layui-form-label">Comment</label>
                             <div class="layui-input-block">
-                                <textarea name="comment" placeholder="input" class="layui-textarea"></textarea>
+                                <textarea name="comment" placeholder="input commons" class="layui-textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-text">
+                            <label class="layui-form-label">City</label>
+                            <div class="layui-input-block">
+                                <textarea name="city" placeholder="input city" class="layui-textarea"></textarea>
                             </div>
                         </div>
                         <div class="layui-form-item">
@@ -98,7 +102,8 @@
 
         //日期
         laydate.render({
-            elem: '#date'
+            elem: '#date',
+            type: 'time'
         });
 
         //普通图片上传
@@ -117,7 +122,7 @@
                     return layer.msg('upload fail');
                 }
                 //上传成功
-                return layer.msg('upload success');
+                return layer.msg('upload Success');
             }
             ,error: function(){
                 //演示失败状态，并实现重传
@@ -134,7 +139,7 @@
 
             $.ajax({
                 type: "POST",
-                url: "/scenic",
+                url: "/restaurant",
                 data: JSON.stringify(obj.field),
                 dataType: "json",
                 contentType: "application/json;charset=utf-8",

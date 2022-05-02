@@ -69,7 +69,7 @@ public class HotelService {
 		//取到缓存中的文件url
 		String fileurl = (String) redisTemplate.opsForValue().get("fileurl");
 
-		hotel.setImg("https://travel-class.oss-cn-beijing.aliyuncs.com/"+fileurl);
+		hotel.setImg("https://cstravel.oss-cn-beijing.aliyuncs.com/"+fileurl);
 		hotelDao.save(hotel);
 	}
 

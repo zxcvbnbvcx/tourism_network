@@ -15,7 +15,7 @@
     <div class="layui-row layui-col-space15">
         <div class="layui-col-md12">
             <div class="layui-card">
-                <div class="layui-card-header">用户列表</div>
+                <div class="layui-card-header">User List</div>
                 <div class="layui-card-body">
 
                     <!--<div class="test-table-reload-btn" style="margin-bottom: 10px;">-->
@@ -29,8 +29,8 @@
                     <table class="layui-hide" id="test-table-reload" lay-filter="test-table-reload"></table>
 
                     <script type="text/html" id="barlist">
-                        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-                        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+                        <a class="layui-btn layui-btn-xs" lay-event="edit">edit</a>
+                        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">delete</a>
                     </script>
                 </div>
             </div>
@@ -50,12 +50,12 @@
                 [
                 {checkbox: true, fixed: true}
                 ,{field:'id', title: 'ID', width:220, sort: true, align:'center'}
-                ,{field:'name', title: '用户名', width:200, align:'center'}
-                ,{field:'sex', title: '性别', width:100, align:'center'}
-                ,{field:'age', title: '年龄', width:100,sort: true, align:'center'}
-                ,{field:'mobile', title: '手机',width:200,sort: true, align:'center'}
-                ,{field:'email', title: '邮箱', width:200, align:'center'}
-                ,{width:165, title:'操作', align:'center', toolbar: '#barlist'}
+                ,{field:'name', title: 'username', width:200, align:'center'}
+                ,{field:'sex', title: 'sex', width:100, align:'center'}
+                ,{field:'age', title: 'age', width:100,sort: true, align:'center'}
+                ,{field:'mobile', title: 'phone',width:200,sort: true, align:'center'}
+                ,{field:'email', title: 'email', width:200, align:'center'}
+                ,{width:165, title:'operate', align:'center', toolbar: '#barlist'}
               ]
             ]
             ,page: true
@@ -67,7 +67,7 @@
             if(obj.event === 'detail'){
                 layer.msg('ID：'+ data.id + ' 的查看操作');
             } else if(obj.event === 'del'){
-                layer.confirm('真的删除行么', function(index){
+                layer.confirm('for real ?', function(index){
                     obj.del();
                     $.ajax({
                         type: "DELETE",
@@ -90,35 +90,35 @@
             } else if(obj.event === 'edit'){
             //    layer.alert('编辑行：<br>'+ JSON.stringify(data))
                 layer.confirm('<div class="layui-form-item">\n' +
-                    '    <label class="layui-form-label">姓名</label>\n' +
+                    '    <label class="layui-form-label">name</label>\n' +
                     '    <div class="layui-input-block">\n' +
                     '      <input type="text" name="title" id="title" required  lay-verify="required" value="'+data.name+'" placeholder="请输入" autocomplete="off" class="layui-input">\n' +
                     '    </div>\n' +
                     '  </div>'+
                     '<div class="layui-form-item">\n' +
-                    '    <label class="layui-form-label">性别</label>\n' +
+                    '    <label class="layui-form-label">sex</label>\n' +
                     '    <div class="layui-input-block">\n' +
                     '      <input type="text" name="sex" id="sex" required  lay-verify="required" value="'+data.sex+'" placeholder="请输入" autocomplete="off" class="layui-input">\n' +
                     '    </div>\n' +
                     '  </div>'+
                     '<div class="layui-form-item">\n' +
-                    '    <label class="layui-form-label">年龄</label>\n' +
+                    '    <label class="layui-form-label">age</label>\n' +
                     '    <div class="layui-input-block">\n' +
                     '      <input type="text" name="age" id="age" required  lay-verify="required" value="'+data.age+'" placeholder="请输入" autocomplete="off" class="layui-input">\n' +
                     '    </div>\n' +
                     '  </div>'+
                     '<div class="layui-form-item">\n' +
-                    '    <label class="layui-form-label">电话</label>\n' +
+                    '    <label class="layui-form-label">phone</label>\n' +
                     '    <div class="layui-input-block">\n' +
                     '      <input type="text" name="mobile" required id="mobile"  lay-verify="required" value="'+data.mobile+'" placeholder="请输入" autocomplete="off" class="layui-input">\n' +
                     '    </div>\n' +
                     '  </div>'+
                     '<div class="layui-form-item">\n' +
-                    '    <label class="layui-form-label">邮箱</label>\n' +
+                    '    <label class="layui-form-label">Email</label>\n' +
                     '    <div class="layui-input-block">\n' +
                     '      <input type="text" name="email" id="email" required  lay-verify="required" value="'+data.email+'" placeholder="请输入" autocomplete="off" class="layui-input">\n' +
                     '    </div>\n' +
-                    '  </div>',{btn:['确定','取消']},function (index,layero) {
+                    '  </div>',{btn:['confirm','cancel']},function (index,layero) {
                     var title=$("#title").val()
                     var sex=$("#sex").val()
                     var age=$("#age").val()

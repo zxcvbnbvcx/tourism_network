@@ -15,15 +15,15 @@
     <div class="layui-row layui-col-space15">
         <div class="layui-col-md12">
             <div class="layui-card">
-                <div class="layui-card-header">添加酒店</div>
+                <div class="layui-card-header">Add Hotel</div>
                 <div class="layui-card-body" pad15>
 
                     <div class="layui-form" lay-filter="">
 
                         <div class="layui-form-item">
-                            <label class="layui-form-label">酒店图片</label>
+                            <label class="layui-form-label">Hotel Image</label>
                             <div class="layui-upload">
-                                <button type="button" class="layui-btn" id="test1" name="img">上传图片</button>
+                                <button type="button" class="layui-btn" id="test1" name="img">Upload Image</button>
                                 <div class="layui-upload-list">
                                     <img class="layui-upload-img" id="demo1">
                                     <p id="demoText" class="layui-upload-text"></p>
@@ -32,29 +32,29 @@
                         </div>
 
                         <div class="layui-form-item">
-                            <label class="layui-form-label">酒店名称</label>
+                            <label class="layui-form-label">Hotel Name</label>
                             <div class="layui-input-inline">
-                                <input type="text" name="name" required  lay-verify="required" autocomplete="off" placeholder="请输入名称" class="layui-input">
+                                <input type="text" name="name" required  lay-verify="required" autocomplete="off" placeholder="Hotel Name" class="layui-input">
                             </div>
                         </div>
 
                         <div class="layui-form-item">
-                            <label class="layui-form-label">单间价格</label>
+                            <label class="layui-form-label">Price</label>
                             <div class="layui-input-inline">
-                                <input type="text" name="price" lay-verify="number" placeholder="请输入价格" autocomplete="off" class="layui-input">
+                                <input type="text" name="price" lay-verify="number" placeholder="Price" autocomplete="off" class="layui-input">
                             </div>
                         </div>
 
                         <div class="layui-form-item">
-                            <label class="layui-form-label">床数</label>
+                            <label class="layui-form-label">stock</label>
                             <div class="layui-input-inline">
-                                <input type="text" name="bed" lay-verify="number"placeholder="请输入库存" autocomplete="off" class="layui-input">
+                                <input type="text" name="bed" lay-verify="number"placeholder="stock" autocomplete="off" class="layui-input">
                             </div>
                         </div>
                         <div class="layui-form-item">
-                            <label class="layui-form-label">地址</label>
+                            <label class="layui-form-label">Address</label>
                             <div class="layui-input-inline">
-                                <input type="text" name="addr" required  lay-verify="required" autocomplete="off" placeholder="请输入酒店地址" class="layui-input">
+                                <input type="text" name="addr" required  lay-verify="required" autocomplete="off" placeholder="Address" class="layui-input">
                             </div>
                         </div>
 
@@ -67,14 +67,14 @@
                         <!--</div>-->
 
                         <div class="layui-form-item layui-form-text">
-                            <label class="layui-form-label">详细描述</label>
+                            <label class="layui-form-label">Description</label>
                             <div class="layui-input-block">
-                                <textarea name="miaoshu" placeholder="请输入内容" class="layui-textarea"></textarea>
+                                <textarea name="miaoshu" placeholder="Description" class="layui-textarea"></textarea>
                             </div>
                         </div>
                         <div class="layui-form-item">
                             <div class="layui-input-block">
-                                <button class="layui-btn" lay-submit lay-filter="setmyinfo">确认添加</button>
+                                <button class="layui-btn" lay-submit lay-filter="setmyinfo">Confirm</button>
                             </div>
                         </div>
                     </div>
@@ -113,10 +113,10 @@
             ,done: function(res){
                 //如果上传失败
                 if(res.code > 0){
-                    return layer.msg('上传失败');
+                    return layer.msg('Upload fail');
                 }
                 //上传成功
-                return layer.msg('上传成功');
+                return layer.msg('Upload success');
             }
             ,error: function(){
                 //演示失败状态，并实现重传

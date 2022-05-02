@@ -22,5 +22,6 @@ public class TravelApplication{
 	public BCryptPasswordEncoder bcryptPasswordEncoder(){
 		return new BCryptPasswordEncoder();
 	}
+
 }
 

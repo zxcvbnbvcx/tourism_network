@@ -91,7 +91,7 @@ public class GalleryService {
 		//取到缓存中的文件url
 		String fileurl = (String) redisTemplate.opsForValue().get("gallery");
 
-		gallery.setImg("https://travel-class.oss-cn-beijing.aliyuncs.com/"+fileurl);
+		gallery.setImg("https://cstravel.oss-cn-beijing.aliyuncs.com/"+fileurl);
 
 		galleryDao.save(gallery);
 	}

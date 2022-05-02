@@ -14,14 +14,14 @@
     <div class="layui-row layui-col-space15">
         <div class="layui-col-md12">
             <div class="layui-card">
-                <div class="layui-card-header">酒店列表</div>
+                <div class="layui-card-header">Hotel List</div>
                 <div class="layui-card-body">
 
                     <table class="layui-hide" id="test-table-reload" lay-filter="test-table-reload"></table>
 
                     <script type="text/html" id="barlist">
-                        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-                        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+                        <a class="layui-btn layui-btn-xs" lay-event="edit">edit</a>
+                        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">delete</a>
                     </script>
                 </div>
             </div>
@@ -41,13 +41,13 @@
                 [
                     {checkbox: true, fixed: true}
                     ,{field:'id', title: 'ID', width:180, sort: true, align:'center'}
-                    ,{field:'name', title: '酒店名称', width:180, align:'center', edit: 'text'}
-                    ,{field:'price', title: '价格', width:100, align:'center',sort: true, edit: 'text'}
-                    ,{field:'bed', title: '床', width:100,sort: true, align:'center'}
-                    ,{field:'star', title: '评分', width:104,sort: true, align:'center'}
-                    ,{field:'addr', title: '地点', width:124,sort: true, align:'center'}
-                    ,{field:'miaoshu', title: '酒店概述',width:400, align:'center',event: 'setSign', style:'cursor: pointer;'}
-                    ,{width:136, title:'操作', align:'center', toolbar: '#barlist'}
+                    ,{field:'name', title: 'hotel name', width:180, align:'center', edit: 'text'}
+                    ,{field:'price', title: 'price', width:100, align:'center',sort: true, edit: 'text'}
+                    ,{field:'bed', title: 'bed', width:100,sort: true, align:'center'}
+                    ,{field:'star', title: 'start', width:104,sort: true, align:'center'}
+                    ,{field:'addr', title: 'address', width:124,sort: true, align:'center'}
+                    ,{field:'miaoshu', title: 'descripbtion',width:400, align:'center',event: 'setSign', style:'cursor: pointer;'}
+                    ,{width:136, title:'operator', align:'center', toolbar: '#barlist'}
                 ]
             ]
             ,page: true

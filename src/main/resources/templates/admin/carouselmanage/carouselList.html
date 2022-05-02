@@ -16,14 +16,14 @@
             <div class="layui-card">
                 <div class="layui-card-header">
                     <button id="add" class="layui-btn layui-btn-normal">
-                        添加轮播
+                        Add Information
                     </button>
                 </div>
                 <div class="layui-card-body">
                     <table class="layui-hide" id="test-table-reload" lay-filter="test-table-reload"></table>
                     <script type="text/html" id="barlist">
-                        <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-                        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+                        <a class="layui-btn layui-btn-xs" lay-event="edit">edit</a>
+                        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">delete</a>
                     </script>
                 </div>
             </div>
@@ -41,29 +41,29 @@
 
                     <div class="layui-form">
                         <div class="layui-form-item">
-                            <label class="layui-form-label">内容一：</label>
+                            <label class="layui-form-label">Title 1:</label>
                             <div class="layui-input-block">
-                                <input type="text" name="title" lay-verify="required" autocomplete="off" placeholder="请输入内容一" class="layui-input">
+                                <input type="text" name="title" lay-verify="required" autocomplete="off" placeholder="Title" class="layui-input">
                             </div>
                         </div>
 
                         <div class="layui-form-item">
-                            <label class="layui-form-label">内容二：</label>
+                            <label class="layui-form-label">Title 2:</label>
                             <div class="layui-input-block">
-                                <input type="text" name="comment" lay-verify="required" placeholder="请输入内容二" autocomplete="off" class="layui-input">
+                                <input type="text" name="comment" lay-verify="required" placeholder="Title" autocomplete="off" class="layui-input">
                             </div>
                         </div>
 
                         <div class="layui-form-item">
-                            <label class="layui-form-label">内容三：</label>
+                            <label class="layui-form-label">Title 3:</label>
                             <div class="layui-input-block">
-                                <input type="text" name="scenictime" lay-verify="required" placeholder="请输入内容三" autocomplete="off" class="layui-input">
+                                <input type="text" name="scenictime" lay-verify="required" placeholder="Title" autocomplete="off" class="layui-input">
                             </div>
                         </div>
 
                         <div class="layui-form-item">
                             <div class="layui-input-block">
-                                <button class="layui-btn" lay-submit lay-filter="setmyinfo">确认添加</button>
+                                <button class="layui-btn" lay-submit lay-filter="setmyinfo">Confirm</button>
                             </div>
                         </div>
                     </div>

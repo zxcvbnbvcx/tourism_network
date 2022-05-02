@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8"/>
-	<title>行影后台管理系统</title>
+	<title>WeTravel Back-End Manage</title>
 	<meta name="renderer" content="webkit">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minum-scale=1.0, maxum-scale=1.0, user-scalable=0">
@@ -79,51 +79,51 @@
 		<div class="layui-side layui-side-menu">
 			<div class="layui-side-scroll">
 				<div class="layui-logo" lay-href="/admin/echars">
-					<span>行影后台管理</span>
+					<span>We Travel Management</span>
 				</div>
 
 				<ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">
 					<li data-name="home" class="layui-nav-item">
 						<a href="javascript:;" lay-tips="主页" lay-direction="2">
 							<i class="layui-icon layui-icon-home"></i>
-							<cite>主页</cite>
+							<cite>Main Page</cite>
 						</a>
 						<dl class="layui-nav-child">
 							<dd data-name="console" class="layui-this">
-								<a lay-href="/admin/echars">控制台</a>
+								<a lay-href="/admin/echars">Control Panel</a>
 							</dd>
 						</dl>
 					</li>
 					<li data-name="component" class="layui-nav-item">
 						<a href="javascript:;" lay-tips="用户" lay-direction="2">
 							<i class="layui-icon layui-icon-user"></i>
-							<cite>用户管理</cite>
+							<cite>User Management</cite>
 						</a>
 						<dl class="layui-nav-child">
 							<dd data-name="teline">
-								<a lay-href="/admin/userList">用户列表</a>
+								<a lay-href="/admin/userList">User List</a>
 							</dd>
 						</dl>
 					</li>
 					<li data-name="template" class="layui-nav-item">
 						<a href="javascript:;" lay-tips="景点" lay-direction="2">
 							<i class="layui-icon layui-icon-tree"></i>
-							<cite>景点管理</cite>
+							<cite>Scene management</cite>
 						</a>
 						<dl class="layui-nav-child">
 							<dd>
-								<a href="javascript:;">景点设置</a>
+								<a href="javascript:;">Scene Setting</a>
 								<dl class="layui-nav-child">
 									<dd>
-										<a lay-href="/scenic/scenicList">景点列表</a>
+										<a lay-href="/scenic/scenicList">Scene List</a>
 									</dd>
 									<dd>
-										<a lay-href="/scenic/scenicAdd">添加景点</a>
+										<a lay-href="/scenic/scenicAdd">Add Scene</a>
 									</dd>
 								</dl>
 							</dd>
 							<dd>
-								<a lay-href="http://weather.com">天气预报</a>
+								<a lay-href="http://weather.com">weather forecast</a>
 							</dd>
 						</dl>
 					</li>
@@ -131,50 +131,64 @@
 					<li data-name="app" class="layui-nav-item">
 						<a href="javascript:;" lay-tips="相册" lay-direction="2">
 							<i class="layui-icon layui-icon-camera"></i>
-							<cite>相册管理</cite>
+							<cite>Gallery management</cite>
 						</a>
 						<dl class="layui-nav-child">
 							<dd>
-								<a lay-href="/gallery/galleryList">相册图片</a>
+								<a lay-href="/gallery/galleryList">Gallery Images</a>
 							</dd>
 							<dd>
-								<a lay-href="/gallery/galleryAdd">添加照片</a>
+								<a lay-href="/gallery/galleryAdd">Add Images</a>
+							</dd>
+						</dl>
+					</li>
+					<li data-name="app" class="layui-nav-item">
+						<a href="javascript:;" lay-tips="餐厅" lay-direction="2">
+							<i class="layui-icon layui-icon-camera"></i>
+							<cite>Restaurant management</cite>
+						</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a lay-href="/restaurant/restaurantList">Restaurant List</a>
+							</dd>
+							<dd>
+								<a lay-href="/restaurant/restaurantAdd">Add Restaurant</a>
 							</dd>
 						</dl>
 					</li>
 					<li data-name="app" class="layui-nav-item">
 						<a href="javascript:;" lay-tips="消息" lay-direction="2">
 							<i class="layui-icon layui-icon-speaker"></i>
-							<cite>消息管理</cite>
+							<cite>Message Management</cite>
 						</a>
 						<dl class="layui-nav-child">
 							<dd>
-								<a lay-href="/carousel/carouselList">轮播信息</a>
+								<a lay-href="/carousel/carouselList">Carousel Information</a>
 							</dd>
 						</dl>
 					</li>
 					<li data-name="senior" class="layui-nav-item">
 						<a href="javascript:;" lay-tips="酒店" lay-direction="2">
 							<i class="layui-icon layui-icon-diamond"></i>
-							<cite>酒店管理</cite>
+							<cite>Hotel Management</cite>
 						</a>
 						<dl class="layui-nav-child">
 							<dd data-name="teline">
-								<a lay-href="/hotel/hotelList">酒店列表</a>
+								<a lay-href="/hotel/hotelList">Hotel List</a>
 							</dd>
 							<dd>
-								<a lay-href="/hotel/hotelAdd">酒店添加</a>
+								<a lay-href="/hotel/hotelAdd">Add Hotel</a>
 							</dd>
 						</dl>
 					</li>
 					<li data-name="user" class="layui-nav-item">
 						<a href="javascript:;" lay-tips="订单" lay-direction="2">
 							<i class="layui-icon layui-icon-spread-left"></i>
-							<cite>订单管理</cite>
+							<cite>Order Management</cite>
 						</a>
 						<dl class="layui-nav-child">
 							<dd data-name="teline">
-								<a lay-href="/orders/ordersList">订单列表</a>
+								<a lay-href="/orders/ordersList">Order List</a>
 							</dd>
 						</dl>
 						</dl>
@@ -192,13 +206,13 @@
 						<a href="javascript:;"></a>
 						<dl class="layui-nav-child layui-an-fadein">
 							<dd layadmin-event="closeThisTabs">
-								<a href="javascript:;">关闭当前标签页</a>
+								<a href="javascript:;">close tab</a>
 							</dd>
 							<dd layadmin-event="closeOtherTabs">
-								<a href="javascript:;">关闭其它标签页</a>
+								<a href="javascript:;">close other tabs</a>
 							</dd>
 							<dd layadmin-event="closeAllTabs">
-								<a href="javascript:;">关闭全部标签页</a>
+								<a href="javascript:;">close all the tabs</a>
 							</dd>
 						</dl>
 					</li>

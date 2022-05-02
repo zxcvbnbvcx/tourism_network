@@ -94,7 +94,7 @@ public class ScenicService {
 		//取到缓存中的文件url
 		String fileurl = (String) redisTemplate.opsForValue().get("fileurl");
 
-        scenic.setImg("https://travel-class.oss-cn-beijing.aliyuncs.com/"+fileurl);
+        scenic.setImg("https://cstravel.oss-cn-beijing.aliyuncs.com/"+fileurl);
 		scenicDao.save(scenic);
 	}
 

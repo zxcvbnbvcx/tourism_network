@@ -18,7 +18,7 @@
     var xData = function() {
         var data = [];
         for (var i = 1; i < 13; i++) {
-            data.push(i + "月份");
+            data.push(i + "Month");
         }
         return data;
     }();
@@ -26,8 +26,8 @@
     option = {
         backgroundColor: "#344b58",
         "title": {
-            "text": "本年订单数量统计",
-            "subtext": "BY XingYingWang",
+            "text": "Annul Average Order statistic",
+            "subtext": "BY Zhao",
             x: "4%",
 
             textStyle: {
@@ -64,7 +64,7 @@
             textStyle: {
                 color: '#90979c',
             },
-            "data": ['女', '男', '平均']
+            "data": ['female', 'male', 'Average']
         },
 
 
@@ -142,9 +142,9 @@
             "end": 35
         }],
         "series": [{
-            "name": "女",
+            "name": "female",
             "type": "bar",
-            "stack": "总量",
+            "stack": "amount",
             "barMaxWidth": 35,
             "barGap": "10%",
             "itemStyle": {
@@ -179,9 +179,9 @@
         },
 
             {
-                "name": "男",
+                "name": "male",
                 "type": "bar",
-                "stack": "总量",
+                "stack": "amount",
                 "itemStyle": {
                     "normal": {
                         "color": "rgba(0,191,183,1)",
@@ -210,9 +210,9 @@
                     0
                 ]
             }, {
-                "name": "总数",
+                "name": "amount",
                 "type": "line",
-                "stack": "总量",
+                "stack": "amount",
                 symbolSize: 10,
                 symbol: 'circle',
                 "itemStyle": {
